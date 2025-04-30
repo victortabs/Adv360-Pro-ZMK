@@ -14,10 +14,20 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        hmteste: hmteste {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMTESTE";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            hold-while-undecided;
         };
     };
 
@@ -28,6 +38,21 @@
             bindings = <&kp CAPS>;
             key-positions = <46 59>;
         };
+
+        Delet {
+            bindings = <&kp DELETE>;
+            key-positions = <46 65>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -36,22 +61,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1            &kp N2              &kp N3          &kp N4          &kp N5  &tog 1                                                                                                     &mo 3      &kp N6  &kp N7           &kp N8           &kp N9               &kp N0                     &kp MINUS
-&kp TAB    &kp Q             &kp W               &kp E           &kp R           &kp T   &none                                                                                                      &none      &kp Y   &kp U            &kp I            &kp O                &kp P                      &kp EQUAL
-&kp ESC    &hm LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G   &mo 2          &kp LGUI  &kp LALT                                &kp RCTRL                      &kp RGUI   &none      &kp H   &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z             &kp X               &kp C           &kp V           &kp B                            &hm LA(LC(LG(HOME))) PAGE_UP            &hm LA(LC(RIGHT_GUI)) HOME                           &kp N   &kp M            &kp COMMA        &kp DOT              &kp FSLH                   &kp RSHFT
-&mo 2      &kp GRAVE         &kp RIGHT_WIN       &kp UP          &kp DOWN                &kp BACKSPACE  &kp DEL   &hm LS(LA(LC(LEFT_GUI))) PAGE_DOWN      &hm LS(LA(LC(RIGHT_GUI))) END  &kp ENTER  &kp SPACE          &kp LEFT         &kp RIGHT        &kp LBKT             &kp RBKT                   &mo 2
+&kp EQUAL                         &kp N1            &kp N2              &kp N3          &kp N4          &kp N5  &tog 1                                                                                                                                 &mo 3      &kp N6  &kp N7           &kp N8           &kp N9               &kp N0                     &kp MINUS
+&lt 4 TAB                         &kp Q             &kp W               &key_repeat     &kp R           &kp T   &none                                                                                                                                  &none      &kp Y   &kp U            &kp I            &kp O                &kp P                      &kp EQUAL
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G   &mo 2          &hm LS(LA(LC(LEFT_GUI))) PAGE_UP  &hm LC(LALT) PAGE_DOWN      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RS(RA(RC(RGUI))) END  &none      &kp H   &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT                         &kp Z             &kp X               &kp C           &kp V           &kp B                                                    &kp LEFT_ALT                &kp RIGHT_CONTROL                                                    &kp N   &kp M            &kp COMMA        &kp DOT              &kp FSLH                   &kp RSHFT
+&mo 2                             &kp GRAVE         &kp RIGHT_WIN       &kp UP          &kp DOWN                &kp BACKSPACE  &kp RIGHT_GUI                     &kp DEL                     &kp RIGHT_GUI                   &kp ENTER                 &kp SPACE          &kp LEFT         &kp RIGHT        &kp LBKT             &kp RBKT                   &mo 2
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp GRAVE  &kp N1             &kp N2             &kp N3        &kp N4    &kp N5  &trans                                                  &mo 3      &kp F2                 &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q              &kp W              &kp E         &kp R     &kp T   &none                                                   &none      &kp LEFT_PARENTHESIS   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A              &kp S              &kp D         &kp F     &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI  &kp RCTRL  &none      &kp RIGHT_PARENTHESIS  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z              &kp X              &kp C         &kp V     &kp B                        &trans        &trans                          &kp COMMA              &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp UP_ARROW  &kp DOWN          &kp BSPC  &kp DEL    &trans        &trans    &kp ENTER  &kp KP_N0                         &kp LEFT    &kp RIGHT     &kp KP_DOT     &kp EQUAL        &mo 2
+&kp GRAVE  &trans             &trans             &trans     &trans     &trans  &trans                                              &mo 3      &kp F2                 &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &trans             &kp UP             &trans     &trans     &trans  &none                                               &none      &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp LEFT           &kp DOWN           &kp RIGHT  &trans     &trans  &none     &trans     &trans      &trans  &trans     &none      &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                        &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                         &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
             >;
         };
 
@@ -77,24 +102,15 @@
             >;
         };
 
-        extra1 {
-            display-name = "Red";
-            status = "reserved";
-        };
-
-        extra2 {
-            display-name = "Purple";
-            status = "reserved";
-        };
-
-        extra3 {
-            display-name = "Cyan";
-            status = "reserved";
-        };
-
-        extra4 {
-            display-name = "Yellow";
-            status = "reserved";
+        layer_8 {
+            display-name = "Layer";
+            bindings = <
+&kp EQUAL                         &kp N1            &kp N2              &kp N3          &kp N4          &kp N5  &tog 1                                                                                                                                 &mo 3      &kp N6  &kp N7           &kp N8           &kp N9               &kp N0                     &kp MINUS
+&lt 0 TAB                         &kp Q             &kp W               &key_repeat     &kp R           &kp T   &none                                                                                                                                  &none      &kp Y   &kp U            &kp I            &kp O                &kp P                      &kp EQUAL
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &kp G   &mo 2          &hm LS(LA(LC(LEFT_GUI))) PAGE_UP  &hm LC(LALT) PAGE_DOWN      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RS(RA(RC(RGUI))) END  &none      &kp H   &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT                         &kp Z             &kp X               &kp C           &kp V           &kp B                                                    &kp LEFT_ALT                &kp RIGHT_CONTROL                                                    &kp N   &kp M            &kp COMMA        &kp DOT              &kp FSLH                   &kp RSHFT
+&mo 2                             &kp GRAVE         &kp RIGHT_WIN       &kp UP          &kp DOWN                &kp BACKSPACE  &kp RIGHT_GUI                     &kp DEL                     &kp RIGHT_GUI                   &kp ENTER                 &kp SPACE          &kp LEFT         &kp RIGHT        &kp LBKT             &kp RBKT                   &mo 2
+            >;
         };
     };
 };
