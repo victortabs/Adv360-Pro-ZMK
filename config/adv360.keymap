@@ -30,6 +30,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hm_fast: hm_fast {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_FAST";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -67,33 +77,33 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL                         &kp N1                 &kp N2              &kp N3          &kp N4          &kp N5   &tog 1                                                                                                                                 &mo 3          &kp N6  &kp N7           &kp N8           &kp N9               &kp N0                     &kp MINUS
-&lt 6 TAB                         &kp Q                  &kp W               &kp E           &kp R           &kp T    &none                                                                                                                                  &mo 0          &kp Y   &kp U            &kp I            &kp O                &kp P                      &lt 6 BACKSLASH
-&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &lt 4 G  &key_repeat    &hm LS(LA(LC(LEFT_GUI))) PAGE_UP  &hm LC(LALT) PAGE_DOWN      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RS(RA(RC(RGUI))) END  &kp BACKSPACE  &kp H   &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT                         &kp Z                  &kp X               &kp C           &kp V           &kp B                                                     &kp LEFT_ALT                &kp RIGHT_CONTROL                                                        &kp N   &kp M            &kp COMMA        &kp DOT              &kp FSLH                   &kp RSHFT
-&mo 2                             &kp GRAVE              &kp CAPSLOCK        &kp ENTER       &mo 5                    &kp BACKSPACE  &kp RIGHT_GUI                     &kp DEL                     &kp RIGHT_GUI                   &kp ENTER                 &kp SPACE              &mo 4            &kp RA(LEFT)     &kp LBKT             &kp RBKT                   &mo 2
+&kp EQUAL                         &kp N1                 &kp N2              &kp N3          &kp N4          &kp N5   &tog 1                                                                                                                                 &mo 3          &kp N6   &kp N7                          &kp N8                           &kp N9               &kp N0                          &kp MINUS
+&lt 6 TAB                         &kp Q                  &kp W               &kp E           &kp R           &lt 4 T  &none                                                                                                                                  &mo 4          &kp Y    &kp U                           &kp I                            &kp O                &kp P                           &lt 6 BACKSLASH
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_GUI F  &lt 5 G  &key_repeat    &hm LS(LA(LC(LEFT_GUI))) PAGE_UP  &hm LC(LALT) PAGE_DOWN      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RS(RA(RC(RGUI))) END  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J                 &hm RIGHT_ALT K                  &hm RIGHT_CONTROL L  &hm_fast RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT                         &kp Z                  &kp X               &kp C           &kp V           &kp B                                                     &kp LEFT_ALT                &kp RIGHT_CONTROL                                                        &kp N    &kp M                           &kp COMMA                        &kp DOT              &kp FSLH                        &kp RSHFT
+&mo 2                             &kp GRAVE              &kp CAPSLOCK        &kp ENTER       &mo 5                    &kp BACKSPACE  &kp RIGHT_GUI                     &kp DEL                     &kp RIGHT_GUI                   &kp ENTER                 &kp SPACE               &kp LS(LA(LC(LG(LEFT_ARROW))))  &kp RA(RG(RC(RS(RIGHT_ARROW))))  &kp LBKT             &kp RBKT                        &mo 2
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp GRAVE  &trans             &trans             &trans     &trans     &trans  &trans                                              &mo 3      &kp F2                 &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &none                                               &none      &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &trans     &none      &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                        &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                         &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
+&kp GRAVE  &trans             &trans             &trans     &trans     &trans  &trans                                              &mo 3          &kp F2                 &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &none                                               &none          &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &kp DEL    &kp BACKSPACE  &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                            &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                             &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1        &kp F2       &kp F3   &kp F4   &kp F5   &kp F6  &tog 1                                            &mo 3   &kp F7  &kp F8          &kp F9    &kp F10    &kp F11  &kp F12
-&trans        &kp F21      &kp F22  &kp F23  &kp F24  &trans  &none                                             &none   &trans  &trans          &kp UP    &trans     &trans   &kp NON_US_BACKSLASH
-&kp CAPSLOCK  &kp F17      &kp F18  &kp F19  &kp F20  &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans   &trans
-&trans        &kp F13      &kp F14  &kp F15  &kp F16  &trans                        &trans      &trans                  &trans  &trans          &trans    &trans     &trans   &trans
-&trans        &key_repeat  &trans   &trans   &trans           &kp SPACE  &kp ENTER  &trans      &trans  &trans  &trans          &trans          &trans    &trans     &trans   &trans
+&kp F1      &kp F2       &kp F3   &kp F4   &kp F5   &kp F6  &tog 1                                            &mo 3   &kp F7  &kp F8          &kp F9    &kp F10    &kp F11  &kp F12
+&trans      &kp F21      &kp F22  &kp F23  &kp F24  &trans  &none                                             &none   &trans  &trans          &kp UP    &trans     &trans   &kp NON_US_BACKSLASH
+&caps_word  &kp F17      &kp F18  &kp F19  &kp F20  &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT  &trans   &trans
+&trans      &kp F13      &kp F14  &kp F15  &kp F16  &trans                        &trans      &trans                  &trans  &trans          &trans    &trans     &trans   &trans
+&trans      &key_repeat  &trans   &trans   &trans           &kp SPACE  &kp ENTER  &trans      &trans  &trans  &trans          &trans          &trans    &trans     &trans   &trans
             >;
         };
 
@@ -108,25 +118,25 @@
             >;
         };
 
-        layer_4 {
+        Mouse {
             display-name = "Mod";
             bindings = <
-&none  &none  &none           &mkp MCLK       &none            &none  &none                                           &none        &none  &none  &none  &none  &none  &none
-&none  &none  &mkp LCLK       &mmv MOVE_UP    &mkp MB2         &none  &bootloader                                     &bootloader  &none  &none  &none  &none  &none  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none        &none     &none      &none  &none  &none        &none  &none  &none  &none  &none  &none
-&none  &none  &none           &none           &none            &none                         &none      &none                      &none  &none  &none  &none  &none  &none
-&none  &none  &none           &none           &none                   &kp RET      &kp BSPC  &none      &none  &none  &none               &none  &none  &none  &none  &none
+&none  &none  &none           &mkp MCLK       &none            &none  &none                                           &none  &none            &none           &none              &none             &none  &none
+&none  &none  &mkp LCLK       &mmv MOVE_UP    &mkp MB2         &none  &bootloader                                     &none  &none            &kp K_PREVIOUS  &kp K_NEXT         &kp K_PLAY_PAUSE  &none  &none
+&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none        &none     &none      &none  &none  &none  &kp C_VOLUME_UP  &kp K_MUTE      &kp C_VOLUME_DOWN  &none             &none  &none
+&none  &none  &none           &none           &none            &none                         &none      &none                &none            &kp C_MUTE      &none              &none             &none  &none
+&none  &none  &none           &none           &none                   &kp RET      &kp BSPC  &none      &none  &none  &none                   &none           &none              &none             &none  &none
             >;
         };
 
         Direcional {
             display-name = "Mod";
             bindings = <
-&none  &none           &none             &none     &none     &none                 &none                                              &none      &none  &none                 &none     &none                  &none  &none
-&none  &none           &none             &none     &none     &none                 &bootloader                                        &none      &none  &kp LEFT_PARENTHESIS  &kp UP    &kp RIGHT_PARENTHESIS  &none  &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &kp LS(LA(LC(LGUI)))  &none        &none     &none      &none  &kp BSPC  &none      &none  &kp LEFT              &kp DOWN  &kp RIGHT              &none  &none
-&none  &none           &none             &none     &none     &none                                        &none      &none                       &none  &none                 &none     &none                  &none  &none
-&none  &none           &none             &none     &none                           &kp RET      &kp BSPC  &none      &none  &kp RET   &kp SPACE         &none                 &none     &none                  &none  &none
+&none  &none           &none             &none     &none     &none                 &none                                                  &none         &none  &none                 &none      &none                  &none  &none
+&none  &none           &none             &none     &none     &none                 &bootloader                                            &none         &none  &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &none  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &kp LS(LA(LC(LGUI)))  &none        &none     &none      &none  &kp BSPC      &none         &none  &kp LEFT              &kp DOWN   &kp RIGHT              &none  &none
+&none  &none           &none             &none     &none     &none                                        &none      &none                              &none  &none                 &kp SPACE  &none                  &none  &none
+&none  &none           &none             &none     &none                           &kp RET      &kp BSPC  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI         &kp BACKSPACE         &none      &none                  &none  &none
             >;
         };
 
