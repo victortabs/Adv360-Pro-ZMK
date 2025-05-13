@@ -57,7 +57,7 @@
 
         CapsWords {
             bindings = <&caps_word>;
-            key-positions = <46 59 47 58>;
+            key-positions = <46 62>;
         };
 
         Enter {
@@ -74,6 +74,13 @@
 
             label = "NEW_MACRO";
         };
+
+        selecionar_palavra: selecionar_palavra {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW) &kp LS(LA(RIGHT))>;
+            label = "SELECIONAR_PALAVRA";
+        };
     };
 
     keymap {
@@ -82,11 +89,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL                         &kp N1                 &kp N2              &kp N3            &kp N4            &kp N5   &tog 1                                                                                                                                 &mo 3          &kp N6   &kp N7           &kp N8           &kp N9               &kp N0                          &kp MINUS
-&lt 6 TAB                         &kp Q                  &kp W               &kp E             &kp R             &lt 4 T  &none                                                                                                                                  &mo 4          &kp Y    &kp U            &kp I            &kp O                &kp P                           &lt 6 BACKSLASH
-&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D    &hm LEFT_GUI F    &lt 5 G  &key_repeat    &hm LS(LA(LC(LEFT_GUI))) PAGE_UP  &hm LC(LALT) PAGE_DOWN      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RS(RA(RC(RGUI))) END  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm_fast RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT                         &kp Z                  &kp X               &hm_slow LG(C) C  &hm_slow LG(V) V  &kp B                                                     &kp LEFT_ALT                &kp RIGHT_CONTROL                                                        &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
-&mo 2                             &kp GRAVE              &kp CAPSLOCK        &kp ENTER         &mo 5                      &kp BACKSPACE  &kp RIGHT_GUI                     &kp DEL                     &kp RIGHT_GUI                   &kp ENTER                 &kp SPACE               &kp LEFT_ARROW   &kp UP_ARROW     &kp RIGHT            &kp DOWN_ARROW                  &mo 2
+&kp EQUAL                         &kp N1                 &kp N2              &kp N3            &kp N4            &kp N5   &tog 1                                                                                                                &mo 3          &kp N6   &kp N7           &kp N8           &kp N9               &kp N0                          &kp MINUS
+&lt 6 TAB                         &kp Q                  &kp W               &kp E             &kp R             &lt 4 T  &none                                                                                                                 &mo 4          &kp Y    &kp U            &kp I            &kp O                &kp P                           &lt 6 BACKSLASH
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D    &hm LEFT_GUI F    &lt 5 G  &key_repeat    &hm LS(LEFT_GUI) ENTER  &hm LS(LALT) DELETE      &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RA(RC(RGUI)) END  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm_fast RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT                         &kp Z                  &kp X               &hm_slow LG(C) C  &hm_slow LG(V) V  &kp B                                           &kp PAGE_UP              &kp RIGHT_CONTROL                                                    &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
+&mo 2                             &kp GRAVE              &kp CAPSLOCK        &kp UP_ARROW      &kp DOWN                   &kp BACKSPACE  &kp RIGHT_GUI           &kp PAGE_DOWN            &kp RIGHT_GUI                   &kp ENTER             &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET     &kp RIGHT_BRACKET               &mo 2
             >;
         };
 
@@ -137,11 +144,11 @@
         Direcional {
             display-name = "Mod";
             bindings = <
-&none  &none           &none             &none     &none     &none                 &none                                                  &none         &none  &none                 &none      &none                  &none  &none
-&none  &none           &none             &none     &none     &none                 &bootloader                                            &none         &none  &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &none  &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT  &kp LGUI  &kp LS(LA(LC(LGUI)))  &none        &none     &none      &none  &kp BSPC      &none         &none  &kp LEFT              &kp DOWN   &kp RIGHT              &none  &none
-&none  &none           &none             &none     &none     &none                                        &none      &none                              &none  &kp F2                &kp SPACE  &none                  &none  &none
-&none  &none           &none             &none     &none                           &kp LSHFT    &kp BSPC  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI         &kp BACKSPACE         &none      &none                  &none  &none
+&none  &none           &none             &none             &none                 &none                 &none                                                  &none         &none  &none                 &none      &none                  &none  &none
+&none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)  &none                 &bootloader                                            &none         &none  &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &none  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT          &kp LGUI              &kp LS(LA(LC(LGUI)))  &none        &none     &none      &none  &kp BSPC      &none         &none  &kp LEFT              &kp DOWN   &kp RIGHT              &none  &none
+&none  &none           &none             &none             &none                 &none                                        &none      &none                              &none  &kp F2                &kp SPACE  &selecionar_palavra    &none  &none
+&none  &none           &none             &none             &none                                       &kp LSHFT    &kp BSPC  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI         &kp BACKSPACE         &none      &none                  &none  &none
             >;
         };
 
