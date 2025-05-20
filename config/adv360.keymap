@@ -108,7 +108,7 @@
             display-name = "Kp";
             bindings = <
 &kp GRAVE  &trans             &trans             &trans     &trans     &trans  &trans                                              &mo 3          &kp F2                 &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &none                                               &none          &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &tog 7                                              &none          &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &kp DEL    &kp BACKSPACE  &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                            &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
 &mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                             &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
@@ -173,11 +173,11 @@
         Mao_Esquerda {
             display-name = "Teclado";
             bindings = <
-&none  &none           &none             &none             &none                     &none  &none                                                   &none         &none    &kp F2                &kp EQUAL  &kp FSLH               &kp STAR   &none
-&none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)      &none  &bootloader                                             &none         &none    &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &kp MINUS  &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT          &kp LGUI                  &none  &none        &none      &none      &none  &kp BSPC      &none         &kp RET  &kp LEFT              &kp DOWN   &kp RIGHT              &kp PLUS   &none
-&none  &none           &none             &none             &kp LC(LA(LS(LEFT_GUI)))  &none                          &none      &none                              &none    &deletar_linha        &kp SPACE  &selecionar_palavra    &none      &none
-&none  &none           &none             &none             &none                            &kp LSHFT    &kp ENTER  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI           &kp BACKSPACE         &none      &none                  &none      &none
+&none      &none  &none  &none  &none  &none  &to 0                                                      &none         &none    &kp F2                &kp EQUAL  &kp FSLH               &kp STAR   &none
+&none      &kp P  &kp L  &kp I  &kp R  &kp T  &bootloader                                                &none         &none    &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &kp MINUS  &none
+&kp ESC    &kp A  &kp S  &kp D  &kp M  &kp G  &none        &none     &none          &none  &kp BSPC      &none         &kp RET  &kp LEFT              &kp DOWN   &kp RIGHT              &kp PLUS   &none
+&kp LSHFT  &none  &none  &kp C  &kp V  &kp B                         &kp PG_UP      &none                              &none    &deletar_linha        &kp SPACE  &selecionar_palavra    &none      &none
+&none      &none  &none  &none  &none         &kp RET      &kp BSPC  &kp PG_DN      &none  &kp LEFT_ALT  &kp LEFT_GUI           &kp BACKSPACE         &none      &none                  &none      &none
             >;
         };
     };
