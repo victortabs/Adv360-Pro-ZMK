@@ -81,6 +81,13 @@
             bindings = <&kp LA(LEFT_ARROW) &kp LS(LA(RIGHT))>;
             label = "SELECIONAR_PALAVRA";
         };
+
+        deletar_linha: deletar_linha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT) &kp LS(LG(LEFT_ARROW)) &kp RG(DELETE)>;
+            label = "DELETAR_LINHA";
+        };
     };
 
     keymap {
@@ -144,11 +151,11 @@
         Direcional {
             display-name = "Mod";
             bindings = <
-&none  &none           &none             &none             &none                 &none                 &none                                                  &none         &none  &none                 &none      &none                  &none  &none
-&none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)  &none                 &bootloader                                            &none         &none  &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &none  &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT          &kp LGUI              &kp LS(LA(LC(LGUI)))  &none        &none     &none      &none  &kp BSPC      &none         &none  &kp LEFT              &kp DOWN   &kp RIGHT              &none  &none
-&none  &none           &none             &none             &none                 &none                                        &none      &none                              &none  &kp F2                &kp SPACE  &selecionar_palavra    &none  &none
-&none  &none           &none             &none             &none                                       &kp LSHFT    &kp BSPC  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI         &kp BACKSPACE         &none      &none                  &none  &none
+&none  &none           &none             &none             &none                     &none  &none                                                  &none         &none    &kp F2                &kp EQUAL  &kp FSLH               &kp STAR   &none
+&none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)      &none  &bootloader                                            &none         &none    &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &kp MINUS  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT          &kp LGUI                  &none  &none        &none     &none      &none  &kp BSPC      &none         &kp RET  &kp LEFT              &kp DOWN   &kp RIGHT              &kp PLUS   &none
+&none  &none           &none             &none             &kp LC(LA(LS(LEFT_GUI)))  &none                         &none      &none                              &none    &deletar_linha        &kp SPACE  &selecionar_palavra    &none      &none
+&none  &none           &none             &none             &none                            &kp LSHFT    &kp BSPC  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI           &kp BACKSPACE         &none      &none                  &none      &none
             >;
         };
 
@@ -160,6 +167,17 @@
 &kp LS(LA(LC(LG(ESCAPE))))  &kp LS(LA(LC(LG(A))))      &kp LS(LA(LC(LG(S))))   &kp LS(LA(LC(LG(D))))   &kp LS(LA(LC(LG(F))))           &kp LS(LA(LC(LG(G))))   &key_repeat    &kp LS(LA(LC(LG(PG_UP))))  &kp LS(LA(LC(LG(PG_DN))))      &kp LS(LA(LC(LG(HOME))))  &kp LS(LA(LC(LG(END))))  &none      &kp LS(LA(LC(LG(H))))   &kp LA(LS(LC(LG(J))))           &kp LS(LA(LC(LG(K))))      &kp LS(LA(LC(LG(L))))     &kp LS(LA(LC(LG(SEMI))))  &kp LS(LA(LC(LG(SQT))))
 &none                       &kp LS(LA(LC(LG(Z))))      &kp LS(LA(LC(LG(X))))   &kp LS(LA(LC(LG(C))))   &kp LS(LA(LC(LG(V))))           &kp LS(LA(LC(LG(B))))                                             &kp LEFT_ALT                   &kp RIGHT_CONTROL                                             &kp LS(LA(LC(LG(N))))   &kp LS(LC(LA(LG(M))))           &kp LS(LA(LC(LG(COMMA))))  &kp LS(LA(LC(LG(DOT))))   &kp LS(LA(LC(LG(FSLH))))  &none
 &mo 2                       &kp LS(LA(LC(LG(GRAVE))))  &kp CAPSLOCK            &kp LS(LA(LC(LG(UP))))  &kp LS(LA(LC(LG(DOWN_ARROW))))                          &kp BACKSPACE  &kp RIGHT_GUI              &kp DEL                        &kp RIGHT_GUI             &kp ENTER                &kp SPACE                          &kp LS(LA(LC(LG(LEFT_ARROW))))  &kp LS(LA(LG(LC(RIGHT))))  &kp LS(LA(LC(LG(LBKT))))  &kp LS(LA(LC(LG(RBKT))))  &mo 2
+            >;
+        };
+
+        Mao_Esquerda {
+            display-name = "Teclado";
+            bindings = <
+&none  &none           &none             &none             &none                     &none  &none                                                   &none         &none    &kp F2                &kp EQUAL  &kp FSLH               &kp STAR   &none
+&none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)      &none  &bootloader                                             &none         &none    &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &kp MINUS  &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LALT          &kp LGUI                  &none  &none        &none      &none      &none  &kp BSPC      &none         &kp RET  &kp LEFT              &kp DOWN   &kp RIGHT              &kp PLUS   &none
+&none  &none           &none             &none             &kp LC(LA(LS(LEFT_GUI)))  &none                          &none      &none                              &none    &deletar_linha        &kp SPACE  &selecionar_palavra    &none      &none
+&none  &none           &none             &none             &none                            &kp LSHFT    &kp ENTER  &none      &none  &kp LEFT_ALT  &kp LEFT_GUI           &kp BACKSPACE         &none      &none                  &none      &none
             >;
         };
     };
