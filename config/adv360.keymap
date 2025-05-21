@@ -94,7 +94,7 @@
         selecionar_proxima_palavra: selecionar_proxima_palavra {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT &kp LS(LG(LEFT_ARROW))>;
+            bindings = <&kp LEFT &kp LS(LA(LEFT_ARROW))>;
             label = "SELECIONAR_PROXIMA_PALAVRA";
         };
     };
