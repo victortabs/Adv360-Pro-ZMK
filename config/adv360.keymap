@@ -107,11 +107,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL                         &hm_slow F2 N1         &kp N2              &kp N3            &kp N4            &kp N5   &tog 1                                                                                                                   &mo 3          &kp N6   &kp N7           &kp N8           &kp N9               &kp N0                          &kp MINUS
-&lt 6 TAB                         &kp Q                  &kp W               &kp E             &kp R             &lt 4 T  &macro_palavra 0 0                                                                                                       &mo 4          &kp Y    &kp U            &kp I            &kp O                &kp P                           &lt 6 BACKSLASH
-&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D    &hm LEFT_GUI F    &lt 5 G  &key_repeat         &kp ENTER  &hm LS(LALT) DELETE                 &hm RG(RS(RIGHT_CONTROL)) HOME  &hm RA(RC(RGUI)) END  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm_fast RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LSHFT                         &kp Z                  &kp X               &hm_slow LG(C) C  &hm_slow LG(V) V  &kp B                                   &kp PAGE_UP                         &kp RIGHT_CONTROL                                                    &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
-&sl 2                             &kp GRAVE              &kp CAPSLOCK        &kp UP_ARROW      &kp DOWN                   &kp BACKSPACE       &kp DEL    &hm LS(LA(LEFT_GUI)) PAGE_DOWN      &kp RIGHT_GUI                   &kp ENTER             &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET     &kp RIGHT_BRACKET               &sl 2
+&kp EQUAL                         &hm_slow F2 N1         &kp N2              &kp N3            &kp N4            &kp N5   &tog 1                                                                                                      &mo 3          &kp N6   &kp N7           &kp N8           &kp N9               &kp N0                          &kp MINUS
+&lt 6 TAB                         &kp Q                  &kp W               &kp E             &kp R             &lt 4 T  &macro_palavra 0 0                                                                                          &mo 4          &kp Y    &kp U            &kp I            &kp O                &kp P                           &lt 6 BACKSLASH
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S  &hm LEFT_ALT D    &hm LEFT_GUI F    &lt 5 G  &key_repeat         &kp ENTER  &kp LALT                          &kp RIGHT_CONTROL           &kp RIGHT_GUI  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &hm_fast RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LSHFT                         &hm_slow LG(Z) Z       &kp X               &hm_slow LG(C) C  &hm_slow LG(V) V  &kp B                                   &hm LC(LS(LEFT_ALT)) PAGE_UP      &hm LA(RIGHT_CONTROL) HOME                                &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
+&sl 2                             &kp GRAVE              &kp CAPSLOCK        &kp UP_ARROW      &kp DOWN                   &kp BACKSPACE       &kp DEL    &hm LA(LEFT_GUI) PAGE_DOWN        &hm LC(RIGHT_GUI) END       &kp ENTER      &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET     &kp RIGHT_BRACKET               &sl 2
             >;
         };
 
@@ -131,7 +131,7 @@
             bindings = <
 &kp F1            &kp F2               &kp F3          &kp F4  &kp F5  &kp F6  &tog 1                                            &mo 3   &kp F7  &kp F8                    &kp F9                     &kp F10    &kp F11   &kp F12
 &trans            &none                &none           &none   &none   &trans  &none                                             &none   &trans  &trans                    &kp UP                     &trans     &trans    &kp NON_US_BACKSLASH
-&linha_maiuscula  &macro_palavra 0 0   &none           &none   &none   &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LEFT_ARROW            &kp DOWN                   &kp RIGHT  &trans    &trans
+&linha_maiuscula  &macro_palavra 0 0   &none           &none   &none   &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LEFT_ARROW            &kp DOWN                   &kp RIGHT  &trans    &kp LS(LA(LC(LG(RIGHT_BRACKET))))
 &kp LSHFT         &selecionar_palavra  &deletar_linha  &none   &none   &trans                        &trans      &trans                  &trans  &trans                    &trans                     &trans     &trans    &trans
 &trans            &key_repeat          &trans          &trans  &trans          &kp SPACE  &kp ENTER  &trans      &trans  &trans  &trans          &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LBKT   &kp RBKT  &trans
             >;
