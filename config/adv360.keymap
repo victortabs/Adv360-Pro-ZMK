@@ -56,7 +56,7 @@
         compatible = "zmk,combos";
 
         CapsLock {
-            bindings = <&kp CAPS>;
+            bindings = <&linha_maiuscula>;
             key-positions = <46 59>;
         };
 
@@ -68,11 +68,6 @@
         CapsWords {
             bindings = <&caps_word>;
             key-positions = <46 62>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <46 60>;
         };
     };
 
