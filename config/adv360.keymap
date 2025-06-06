@@ -129,11 +129,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1            &kp F2               &kp F3          &kp F4  &kp F5  &kp F6  &tog 1                                            &mo 3   &kp F7  &kp F8                    &kp F9                     &kp F10    &kp F11   &kp F12
-&trans            &none                &none           &none   &none   &trans  &none                                             &none   &trans  &trans                    &kp UP                     &trans     &trans    &kp NON_US_BACKSLASH
-&linha_maiuscula  &macro_palavra 0 0   &none           &none   &none   &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LEFT_ARROW            &kp DOWN                   &kp RIGHT  &trans    &kp LS(LA(LC(LG(RIGHT_BRACKET))))
-&kp LSHFT         &selecionar_palavra  &deletar_linha  &none   &none   &trans                        &trans      &trans                  &trans  &trans                    &trans                     &trans     &trans    &trans
-&trans            &key_repeat          &trans          &trans  &trans          &kp SPACE  &kp ENTER  &trans      &trans  &trans  &trans          &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LBKT   &kp RBKT  &trans
+&kp F1            &kp F2               &kp F3          &kp F4  &kp F5  &kp F6  &tog 1                                            &mo 3   &kp F7  &kp F8                    &kp F9                     &kp F10            &kp F11   &kp F12
+&trans            &none                &none           &none   &none   &trans  &none                                             &none   &trans  &trans                    &none                      &trans             &trans    &kp NON_US_BACKSLASH
+&linha_maiuscula  &macro_palavra 0 0   &none           &none   &none   &trans  &none      &trans     &trans      &trans  &trans  &none   &trans  &kp LS(LC(LEFT_BRACKET))  &none                      &kp LS(LC(RIGHT))  &trans    &kp LS(LA(LC(LG(RIGHT_BRACKET))))
+&kp LSHFT         &selecionar_palavra  &deletar_linha  &none   &none   &trans                        &trans      &trans                  &trans  &trans                    &trans                     &trans             &trans    &trans
+&trans            &key_repeat          &trans          &trans  &trans          &kp SPACE  &kp ENTER  &trans      &trans  &trans  &trans          &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LBKT           &kp RBKT  &trans
             >;
         };
 
