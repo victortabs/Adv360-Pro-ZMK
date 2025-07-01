@@ -138,7 +138,7 @@
         };
 
         mod {
-            display-name = "Mod";
+            display-name = "BT";
             bindings = <
 &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
 &none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
@@ -149,7 +149,7 @@
         };
 
         Mouse {
-            display-name = "Mod";
+            display-name = "Kp";
             bindings = <
 &none  &none  &none           &mkp MCLK       &none            &none  &none                                           &none  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp K_PREVIOUS  &kp K_NEXT  &kp K_PLAY_PAUSE
 &none  &none  &mkp LCLK       &mmv MOVE_UP    &mkp MB2         &none  &bootloader                                     &none  &none              &none            &none       &none           &none       &none
@@ -160,7 +160,7 @@
         };
 
         Direcional {
-            display-name = "Mod";
+            display-name = "Dir";
             bindings = <
 &none  &none           &none             &none             &none                     &none  &none                                                  &none         &none        &kp F2                &kp EQUAL  &kp FSLH               &kp STAR   &none
 &none  &none           &none             &kp LS(LEFT_ALT)  &kp LS(LEFT_COMMAND)      &none  &bootloader                                            &none         &key_repeat  &kp LEFT_PARENTHESIS  &kp UP     &kp RIGHT_PARENTHESIS  &kp MINUS  &none
@@ -173,7 +173,7 @@
         Hyper_layer {
             display-name = "Mod";
             bindings = <
-&kp LS(LA(LC(LG(EQUAL))))   &kp LS(LA(LC(LG(N1))))     &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LS(LA(LC(LG(N4))))          &kp LS(LA(LC(LG(N5))))  &tog 1                                                                                                                      &mo 3      &kp LS(LA(LC(LG(N6))))  &kp LS(LA(LC(LG(N7))))          &kp LS(LA(LC(LG(N8))))     &kp LS(LA(LC(LG(N9))))    &kp LS(LA(LC(LG(N0))))    &kp LS(LA(LC(LG(MINUS))))
+&kp LS(LA(LC(EQUAL)))       &kp LS(LA(LC(N1)))         &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LS(LA(LC(LG(N4))))          &kp LS(LA(LC(LG(N5))))  &tog 1                                                                                                                      &mo 3      &kp LS(LA(LC(LG(N6))))  &kp LS(LA(LC(LG(N7))))          &kp LS(LA(LC(LG(N8))))     &kp LS(LA(LC(LG(N9))))    &kp LS(LA(LC(LG(N0))))    &kp LS(LA(LC(LG(MINUS))))
 &none                       &kp LS(LA(LC(LG(Q))))      &kp LS(LA(LC(LG(W))))   &kp LS(LA(LC(LG(E))))   &kp LS(LA(LC(LG(R))))           &kp LS(LA(LC(LG(T))))   &none                                                                                                                       &none      &kp LS(LA(LC(LG(Y))))   &kp LS(LA(LC(LG(U))))           &kp LS(LA(LC(LG(I))))      &kp LS(LA(LC(LG(O))))     &kp LS(LA(LC(LG(P))))     &kp LS(LA(LC(LG(BACKSLASH))))
 &kp LS(LA(LC(LG(ESCAPE))))  &kp LS(LA(LC(LG(A))))      &kp LS(LA(LC(LG(S))))   &kp LS(LA(LC(LG(D))))   &kp LS(LA(LC(LG(F))))           &kp LS(LA(LC(LG(G))))   &key_repeat    &kp LS(LA(LC(LG(PG_UP))))  &kp LS(LA(LC(LG(PG_DN))))      &kp LS(LA(LC(LG(HOME))))  &kp LS(LA(LC(LG(END))))  &none      &kp LS(LA(LC(LG(H))))   &kp LA(LS(LC(LG(J))))           &kp LS(LA(LC(LG(K))))      &kp LS(LA(LC(LG(L))))     &kp LS(LA(LC(LG(SEMI))))  &kp LS(LA(LC(LG(SQT))))
 &none                       &kp LS(LA(LC(LG(Z))))      &kp LS(LA(LC(LG(X))))   &kp LS(LA(LC(LG(C))))   &kp LS(LA(LC(LG(V))))           &kp LS(LA(LC(LG(B))))                                             &kp LEFT_ALT                   &kp RIGHT_CONTROL                                             &kp LS(LA(LC(LG(N))))   &kp LS(LC(LA(LG(M))))           &kp LS(LA(LC(LG(COMMA))))  &kp LS(LA(LC(LG(DOT))))   &kp LS(LA(LC(LG(FSLH))))  &none
@@ -189,6 +189,17 @@
 &kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &kp DEL    &kp BACKSPACE  &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                            &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
 &mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                             &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
+            >;
+        };
+
+        Lay_special {
+            display-name = "Mod";
+            bindings = <
+&kp LS(LA(LC(EQUAL)))       &kp LS(LA(LC(N1)))         &kp LS(LA(LC(LG(N2))))  &kp LS(LA(LC(LG(N3))))  &kp LS(LA(LC(LG(N4))))          &kp LS(LA(LC(LG(N5))))  &tog 1                                                                                                                      &mo 3      &kp LS(LA(LC(LG(N6))))  &kp LS(LA(LC(LG(N7))))          &kp LS(LA(LC(LG(N8))))     &kp LS(LA(LC(LG(N9))))    &kp LS(LA(LC(LG(N0))))    &kp LS(LA(LC(LG(MINUS))))
+&none                       &kp LS(LA(LC(LG(Q))))      &kp LS(LA(LC(LG(W))))   &kp LS(LA(LC(LG(E))))   &kp LS(LA(LC(LG(R))))           &kp LS(LA(LC(LG(T))))   &none                                                                                                                       &none      &kp LS(LA(LC(LG(Y))))   &kp LS(LA(LC(LG(U))))           &kp LS(LA(LC(LG(I))))      &kp LS(LA(LC(LG(O))))     &kp LS(LA(LC(LG(P))))     &kp LS(LA(LC(LG(BACKSLASH))))
+&kp LS(LA(LC(LG(ESCAPE))))  &kp LS(LA(LC(LG(A))))      &kp LS(LA(LC(LG(S))))   &kp LS(LA(LC(LG(D))))   &kp LS(LA(LC(LG(F))))           &kp LS(LA(LC(LG(G))))   &key_repeat    &kp LS(LA(LC(LG(PG_UP))))  &kp LS(LA(LC(LG(PG_DN))))      &kp LS(LA(LC(LG(HOME))))  &kp LS(LA(LC(LG(END))))  &none      &kp LS(LA(LC(LG(H))))   &kp LA(LS(LC(LG(J))))           &kp LS(LA(LC(LG(K))))      &kp LS(LA(LC(LG(L))))     &kp LS(LA(LC(LG(SEMI))))  &kp LS(LA(LC(LG(SQT))))
+&none                       &kp LS(LA(LC(LG(Z))))      &kp LS(LA(LC(LG(X))))   &kp LS(LA(LC(LG(C))))   &kp LS(LA(LC(LG(V))))           &kp LS(LA(LC(LG(B))))                                             &kp LEFT_ALT                   &kp RIGHT_CONTROL                                             &kp LS(LA(LC(LG(N))))   &kp LS(LC(LA(LG(M))))           &kp LS(LA(LC(LG(COMMA))))  &kp LS(LA(LC(LG(DOT))))   &kp LS(LA(LC(LG(FSLH))))  &none
+&mo 2                       &kp LS(LA(LC(LG(GRAVE))))  &kp CAPSLOCK            &kp LS(LA(LC(LG(UP))))  &kp LS(LA(LC(LG(DOWN_ARROW))))                          &kp BACKSPACE  &kp RIGHT_GUI              &kp DEL                        &kp RIGHT_GUI             &kp ENTER                &kp SPACE                          &kp LS(LA(LC(LG(LEFT_ARROW))))  &kp LS(LA(LG(LC(RIGHT))))  &kp LS(LA(LC(LG(LBKT))))  &kp LS(LA(LC(LG(RBKT))))  &mo 2
             >;
         };
     };
