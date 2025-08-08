@@ -74,6 +74,11 @@
             bindings = <&sl 9>;
             key-positions = <55 56>;
         };
+
+        Alt_Tab {
+            bindings = <&kp LA(T)>;
+            key-positions = <49 50>;
+        };
     };
 
     macros {
