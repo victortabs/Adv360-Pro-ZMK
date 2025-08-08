@@ -69,6 +69,11 @@
             bindings = <&caps_word>;
             key-positions = <46 62>;
         };
+
+        SW_Layer {
+            bindings = <&sl 9>;
+            key-positions = <55 56>;
+        };
     };
 
     macros {
@@ -207,6 +212,16 @@
 &kp LS(LA(LC(LG(ESCAPE))))  &kp LS(LA(LC(LG(A))))      &kp LS(LA(LC(LG(S))))   &kp LS(LA(LC(LG(D))))   &kp LS(LA(LC(LG(F))))           &kp LS(LA(LC(LG(G))))   &key_repeat    &kp LS(LA(LC(LG(PG_UP))))  &kp LS(LA(LC(LG(PG_DN))))      &kp LS(LA(LC(LG(HOME))))  &kp LS(LA(LC(LG(END))))  &none      &kp LS(LA(LC(LG(H))))   &kp LA(LS(LC(LG(J))))           &kp LS(LA(LC(LG(K))))      &kp LS(LA(LC(LG(L))))     &kp LS(LA(LC(LG(SEMI))))  &kp LS(LA(LC(LG(SQT))))
 &none                       &kp LS(LA(LC(LG(Z))))      &kp LS(LA(LC(LG(X))))   &kp LS(LA(LC(LG(C))))   &kp LS(LA(LC(LG(V))))           &kp LS(LA(LC(LG(B))))                                             &kp LEFT_ALT                   &kp RIGHT_CONTROL                                             &kp LS(LA(LC(LG(N))))   &kp LS(LC(LA(LG(M))))           &kp LS(LA(LC(LG(COMMA))))  &kp LS(LA(LC(LG(DOT))))   &kp LS(LA(LC(LG(FSLH))))  &none
 &mo 2                       &kp LS(LA(LC(LG(GRAVE))))  &kp CAPSLOCK            &kp LS(LA(LC(LG(UP))))  &kp LS(LA(LC(LG(DOWN_ARROW))))                          &kp BACKSPACE  &kp RIGHT_GUI              &kp DEL                        &kp RIGHT_GUI             &kp ENTER                &kp SPACE                          &kp LS(LA(LC(LG(LEFT_ARROW))))  &kp LS(LA(LG(LC(RIGHT))))  &kp LS(LA(LC(LG(LBKT))))  &kp LS(LA(LC(LG(RBKT))))  &mo 2
+            >;
+        };
+
+        SW {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
