@@ -72,12 +72,12 @@
 
         SW_Layer {
             bindings = <&sl 9>;
-            key-positions = <55 56>;
+            key-positions = <50 49>;
         };
 
         Alt_Tab {
             bindings = <&kp LA(T)>;
-            key-positions = <49 50>;
+            key-positions = <55 56>;
         };
     };
 
@@ -222,11 +222,11 @@
 
         SW {
             bindings = <
-&none  &none  &none  &none                &none      &none                &none                                  &none  &none  &none      &none      &none  &none      &none
-&none  &none  &none  &hm RA(RC(E)) RA(E)  &kp RC(R)  &none                &none                                  &none  &none  &none      &kp RC(I)  &none  &kp RC(P)  &none
-&none  &none  &none  &kp RC(D)            &kp RC(F)  &kp RC(G)            &none  &none  &none      &none  &none  &none  &none  &none      &none      &none  &none      &none
-&none  &none  &none  &kp RC(C)            &kp RC(V)  &hm RC(RA(B)) RC(B)                &none      &none                &none  &kp RC(M)  &none      &none  &none      &none
-&none  &none  &none  &none                &none                           &none  &none  &none      &none  &none  &none         &none      &none      &none  &none      &none
+&none  &none                &none      &none                            &none      &none                &none                                  &none  &none  &none      &none      &none  &none      &none
+&none  &hm LC(LA(P)) LC(P)  &kp LC(M)  &hm RA(RC(E)) RA(E)              &kp RC(R)  &kp LC(I)            &none                                  &none  &none  &none      &kp RC(I)  &none  &kp RC(P)  &none
+&none  &none                &kp RC(S)  &hm LA(LG(LS(D))) LG(LC(LA(D)))  &kp RC(F)  &kp RC(G)            &none  &none  &none      &none  &none  &none  &none  &none      &none      &none  &none      &none
+&none  &none                &none      &kp RC(C)                        &kp RC(V)  &hm RC(RA(B)) RC(B)                &none      &none                &none  &kp RC(M)  &none      &none  &none      &none
+&none  &none                &none      &none                            &none                           &none  &none  &none      &none  &none  &none         &none      &none      &none  &none      &none
             >;
         };
     };
