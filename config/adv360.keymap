@@ -102,14 +102,14 @@
         deletar_linha: deletar_linha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(RIGHT) &kp LS(LG(LEFT_ARROW)) &kp DELETE>;
+            bindings = <&kp RA(RIGHT_ARROW) &kp LS(LG(LEFT_ARROW)) &kp DELETE>;
             label = "DELETAR_LINHA";
         };
 
         selecionar_proxima_palavra: selecionar_proxima_palavra {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LEFT) &kp LA(LEFT) &kp LS(LA(RIGHT))>;
+            bindings = <&kp RA(RIGHT_ARROW) &kp LA(LEFT) &kp LA(LEFT) &kp LS(LA(RIGHT))>;
             label = "SELECIONAR_PROXIMA_PALAVRA";
         };
 
@@ -163,11 +163,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1              &kp F2                       &kp F3          &kp F4  &kp F5  &kp F6  &tog 1                                                 &mo 3   &kp F7  &kp F8                    &kp F9                     &kp F10            &kp F11   &kp F12
-&trans              &none                        &none           &none   &none   &trans  &none                                                  &none   &trans  &trans                    &none                      &trans             &trans    &kp NON_US_BACKSLASH
-&linha_maiuscula    &macro_palavra 0 0           &none           &none   &none   &trans  &none           &trans     &trans      &trans  &trans  &none   &trans  &kp LS(LC(LEFT_BRACKET))  &none                      &kp LS(LC(RIGHT))  &trans    &kp LS(LA(LC(LG(RIGHT_BRACKET))))
-&macro_palavra 0 0  &selecionar_proxima_palavra  &deletar_linha  &none   &none   &trans                             &trans      &trans                  &trans  &trans                    &trans                     &trans             &trans    &trans
-&trans              &linha_maiuscula             &caps_word      &trans  &trans          &deletar_linha  &kp ENTER  &trans      &trans  &trans  &trans          &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LBKT           &kp RBKT  &trans
+&kp F1              &kp F2                       &kp F3             &kp F4  &kp F5  &kp F6  &tog 1                                                 &mo 3   &kp F7  &kp F8                    &kp F9                     &kp F10            &kp F11   &kp F12
+&trans              &none                        &none              &none   &none   &trans  &none                                                  &none   &trans  &trans                    &none                      &trans             &trans    &kp NON_US_BACKSLASH
+&linha_maiuscula    &macro_palavra 0 0           &none              &none   &none   &trans  &none           &trans     &trans      &trans  &trans  &none   &trans  &kp LS(LC(LEFT_BRACKET))  &none                      &kp LS(LC(RIGHT))  &trans    &kp LS(LA(LC(LG(RIGHT_BRACKET))))
+&macro_palavra 0 0  &selecionar_proxima_palavra  &selecionar_linha  &none   &none   &trans                             &trans      &trans                  &trans  &trans                    &trans                     &trans             &trans    &trans
+&trans              &linha_maiuscula             &caps_word         &trans  &trans          &deletar_linha  &kp ENTER  &trans      &trans  &trans  &trans          &kp LS(LA(LC(LG(LEFT))))  &kp LS(LA(LC(LG(RIGHT))))  &kp LBKT           &kp RBKT  &trans
             >;
         };
 
