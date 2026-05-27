@@ -70,6 +70,15 @@
             flavor = "tap-preferred";
             bindings = <&Sifrao>, <&kp>;
         };
+
+        tap_dance: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&none>, <&none>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -96,7 +105,7 @@
         };
 
         Alt_Tab {
-            bindings = <&kp LA(T)>;
+            bindings = <&kp LG(LA(Y))>;
             key-positions = <55 56>;
         };
 
@@ -163,11 +172,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&hm_slow PLUS EQUAL               &hm_slow F2 N1         &hm_slow N2 AT_SIGN  &hm_slow F4 NUMBER_3  &Tap_Sifrao 0 NUMBER_4  &kp N5            &tog 1                                                                                                      &mo 3          &kp N6   &kp N7           &hm F9 N8        &hm_slow LEFT_PARENTHESIS N9  &hm_slow RIGHT_PARENTHESIS N0   &kp MINUS
-&lt 6 TAB                         &kp Q                  &hm_slow LC(W) W     &lt 1 E               &lt 5 R                 &hm_slow LC(T) T  &linha_maiuscula                                                                                            &mo 4          &kp Y    &kp U            &lt 1 I          &kp O                         &kp P                           &hm_slow LS(LC(RIGHT_GUI)) BACKSLASH
-&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S   &hm LEFT_ALT D        &hm LEFT_GUI F          &lt 5 G           &macro_palavra 0 0  &kp ENTER  &kp LALT                          &kp RIGHT_CONTROL           &kp RIGHT_GUI  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L           &hm_fast RIGHT_SHIFT SEMICOLON  &hm LA(LC(RIGHT_GUI)) SQT
-&kp LSHFT                         &hm_slow LG(Z) Z       &kp X                &hm_slow LG(C) C      &hm_slow LG(V) V        &kp B                                            &hm LC(LS(LEFT_ALT)) PAGE_UP      &hm LA(RIGHT_CONTROL) HOME                                &kp N    &kp M            &kp COMMA        &kp DOT                       &lt 5 SLASH                     &kp RSHFT
-&sl 2                             &kp GRAVE              &kp CAPSLOCK         &kp UP_ARROW          &kp DOWN                                  &kp BACKSPACE       &kp DEL    &hm LA(LEFT_GUI) PAGE_DOWN        &hm LC(RIGHT_GUI) END       &kp ENTER      &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET              &kp RIGHT_BRACKET               &sl 2
+&hm_slow PLUS EQUAL               &hm_slow F2 N1         &hm_slow LS(N2) NUMBER_2  &hm_slow F4 NUMBER_3  &Tap_Sifrao 0 NUMBER_4  &kp N5            &tog 1                                                                                                      &mo 3          &kp N6   &kp N7           &hm F9 N8        &hm_slow LEFT_PARENTHESIS N9  &hm_slow RIGHT_PARENTHESIS N0   &hm_slow LS(MINUS) MINUS
+&lt 6 TAB                         &kp Q                  &hm_slow LC(W) W          &lt 1 E               &lt 5 R                 &hm_slow LC(T) T  &linha_maiuscula                                                                                            &mo 4          &kp Y    &kp U            &lt 1 I          &kp O                         &kp P                           &hm_slow LS(LC(RIGHT_GUI)) BACKSLASH
+&hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S        &hm LEFT_ALT D        &hm LEFT_GUI F          &lt 5 G           &macro_palavra 0 0  &kp ENTER  &kp LALT                          &kp RIGHT_CONTROL           &kp RIGHT_GUI  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L           &hm_fast RIGHT_SHIFT SEMICOLON  &hm LA(LC(RIGHT_GUI)) SQT
+&kp LSHFT                         &hm_slow LG(Z) Z       &kp X                     &hm_slow LG(C) C      &hm_slow LG(V) V        &kp B                                            &hm LC(LS(LEFT_ALT)) PAGE_UP      &hm LA(RIGHT_CONTROL) HOME                                &kp N    &kp M            &kp COMMA        &kp DOT                       &lt 5 SLASH                     &kp RSHFT
+&sl 2                             &kp GRAVE              &kp CAPSLOCK              &kp UP_ARROW          &kp DOWN                                  &kp BACKSPACE       &kp DEL    &hm LA(LEFT_GUI) PAGE_DOWN        &hm LC(RIGHT_GUI) END       &kp ENTER      &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET              &kp RIGHT_BRACKET               &sl 2
             >;
         };
 
