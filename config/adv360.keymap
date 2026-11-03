@@ -176,18 +176,18 @@
 &lt 6 TAB                         &kp Q                  &hm_slow LC(W) W          &lt 1 E               &lt 5 R                 &hm_slow LC(T) T  &linha_maiuscula                                                                                            &mo 4          &kp Y    &kp U            &lt 1 I          &kp O                         &kp P                           &hm_slow LS(LC(RIGHT_GUI)) BACKSLASH
 &hm RG(RC(RS(RIGHT_ALT))) ESCAPE  &hm_slow LEFT_SHIFT A  &hm LEFT_CONTROL S        &hm LEFT_ALT D        &hm LEFT_GUI F          &lt 5 G           &macro_palavra 0 0  &kp ENTER  &kp LALT                          &kp RIGHT_CONTROL           &kp RIGHT_GUI  &kp BACKSPACE  &lt 4 H  &hm RIGHT_GUI J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L           &hm_fast RIGHT_SHIFT SEMICOLON  &hm LA(LC(RIGHT_GUI)) SQT
 &kp LSHFT                         &hm_slow LG(Z) Z       &kp X                     &hm_slow LG(C) C      &hm_slow LG(V) V        &kp B                                            &hm LC(LS(LEFT_ALT)) PAGE_UP      &hm LA(RIGHT_CONTROL) HOME                                &kp N    &kp M            &kp COMMA        &kp DOT                       &lt 5 SLASH                     &kp RSHFT
-&sl 2                             &kp GRAVE              &kp CAPSLOCK              &kp UP_ARROW          &kp DOWN                                  &kp BACKSPACE       &kp DEL    &hm LA(LEFT_GUI) PAGE_DOWN        &hm LC(RIGHT_GUI) END       &kp ENTER      &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET              &kp RIGHT_BRACKET               &sl 2
+&sl 2                             &kp GRAVE              &kp CAPSLOCK              &kp UP_ARROW          &kp DOWN                                  &kp BACKSPACE       &kp DEL    &hm LA(LEFT_GUI) PAGE_DOWN        &hm LC(RIGHT_GUI) END       &kp ENTER      &kp SPACE               &kp LEFT_ARROW   &kp RIGHT        &kp LEFT_BRACKET              &kp RIGHT_BRACKET               &sl 9
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp GRAVE  &trans             &trans             &trans     &trans     &trans  &trans                                              &mo 3          &kp F2                 &kp KP_NUM       &kp KP_EQUAL     &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &tog 7                                              &none          &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &kp DEL    &kp BACKSPACE  &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                            &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                             &kp COMMA        &kp N0           &kp KP_DOT     &kp EQUAL        &mo 2
+&kp GRAVE  &trans             &trans             &trans     &trans     &trans  &tog 0                                              &mo 3          &kp F2                 &kp DELETE       &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
+&kp TAB    &trans             &trans             &kp UP     &trans     &trans  &tog 7                                              &none          &kp LEFT_PARENTHESIS   &kp KP_N7        &kp KP_N8        &kp KP_N9             &kp KP_MINUS           &kp BSLH
+&kp CAPS   &trans             &kp LEFT           &kp DOWN   &kp RIGHT  &trans  &none     &trans     &trans      &trans  &kp DEL    &kp BACKSPACE  &kp RIGHT_PARENTHESIS  &kp KP_N4        &kp KP_N5        &kp KP_N6             &kp KP_PLUS            &kp SQT
+&kp LSHFT  &trans             &trans             &trans     &trans     &trans                       &trans      &trans                            &kp LS(COLON)          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_N3             &kp SLASH              &kp RSHFT
+&mo 2      &kp RIGHT_CONTROL  &kp RS(RIGHT_ALT)  &kp ENTER  &kp SPACE          &kp BSPC  &kp SPACE  &trans      &trans  &kp ENTER  &kp KP_N0                             &kp COMMA        &kp N0           &kp KP_DOT            &kp EQUAL              &mo 2
             >;
         };
 
@@ -270,11 +270,11 @@
 
         SW {
             bindings = <
-&none  &none                &none      &none                            &none      &none                &none                                  &none  &none  &none      &none      &none  &none      &none
-&none  &hm LC(LA(P)) LC(P)  &kp LC(M)  &hm RA(RC(E)) RA(E)              &kp RC(R)  &kp LC(I)            &none                                  &none  &none  &none      &kp RC(I)  &none  &kp RC(P)  &none
-&none  &none                &kp RC(S)  &hm LA(LG(LS(D))) LG(LC(LA(D)))  &kp RC(F)  &kp RC(G)            &none  &none  &none      &none  &none  &none  &none  &none      &none      &none  &none      &none
-&none  &none                &none      &kp RC(C)                        &kp RC(V)  &hm RC(RA(B)) RC(B)                &none      &none                &none  &kp RC(M)  &none      &none  &none      &none
-&none  &none                &none      &none                            &none                           &none  &none  &none      &none  &none  &none         &none      &none      &none  &none      &none
+&none  &none                  &none      &none                              &none      &none                  &none                                  &none  &none  &none      &none      &none  &none      &none
+&none  &hm (LC(LA(P))) LC(P)  &kp LC(M)  &hm (RA(RC(E))) RA(E)              &kp RC(R)  &kp LC(I)              &none                                  &none  &none  &none      &kp RC(I)  &none  &kp RC(P)  &none
+&none  &none                  &kp RC(S)  &hm (LA(LG(LS(D)))) LG(LC(LA(D)))  &kp RC(F)  &kp RC(G)              &none  &none  &none      &none  &none  &none  &none  &none      &none      &none  &none      &none
+&none  &none                  &none      &kp RC(C)                          &kp RC(V)  &hm (RC(RA(B))) RC(B)                &none      &none                &none  &kp RC(M)  &none      &none  &none      &none
+&none  &none                  &none      &none                              &none                             &none  &none  &none      &none  &none  &none         &none      &none      &none  &none      &none
             >;
         };
     };
